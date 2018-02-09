@@ -15,6 +15,4 @@ api.server.use('/docs', swaggerUi.serve,
 
 api.server.use('/graphiql', graphiql({endpoint: '/api/'}))
 
-require('./models')
-
 api.start()

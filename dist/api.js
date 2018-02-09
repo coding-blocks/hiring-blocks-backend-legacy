@@ -35,6 +35,7 @@ jsonAPI.setConfig({
 jsonAPI.authenticate((req, cb) => {
     return cb();
 });
+require('./models');
 exports.server = jsonAPI.getExpressServer();
 exports.start = jsonAPI.start;
 exports.close = jsonAPI.close;

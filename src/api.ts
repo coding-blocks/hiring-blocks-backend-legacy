@@ -38,6 +38,8 @@ jsonAPI.authenticate((req, cb) => {
   return cb()
 })
 
+require('./models')
+
 export const server = jsonAPI.getExpressServer()
 export const start = jsonAPI.start
 export const close = jsonAPI.close

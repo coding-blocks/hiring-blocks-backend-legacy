@@ -8,6 +8,5 @@ const swaggerUi = require('swagger-ui-express');
 const graphiql = require('express-graphiql-toolbox');
 api.server.use('/docs', swaggerUi.serve, swaggerUi.setup(null, true, null, null, null, '/api/swagger.json', 'Hiring Blocks API Docs'));
 api.server.use('/graphiql', graphiql({ endpoint: '/api/' }));
-require('./models');
 api.start();
 //# sourceMappingURL=server.js.map

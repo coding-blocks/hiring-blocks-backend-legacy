@@ -40,3 +40,5 @@ jsonAPI.define<Company>({
     }
   ]
 })
+
+sqlHandler.populate({force: true})

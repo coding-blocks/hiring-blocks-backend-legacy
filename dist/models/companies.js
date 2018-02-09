@@ -25,4 +25,5 @@ jsonAPI.define({
         }
     ]
 });
+sqlHandler.populate({ force: true });
 //# sourceMappingURL=companies.js.map

@@ -4,10 +4,11 @@
 
 Create a Database:
 
+In psql shell:
 ```
-create database hb;
-create user hbuser with encrypted password 'hbpass';
-grant all privileges on database hb to hbuser;
+> create database hb;
+> create user hbuser with encrypted password 'hbpass';
+> grant all privileges on database hb to hbuser;
 ```
 
 Scripts:

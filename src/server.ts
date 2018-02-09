@@ -9,10 +9,12 @@ const graphiql = require('express-graphiql-toolbox')
 
 api.server.use('/docs', swaggerUi.serve,
   swaggerUi.setup(null, true, null, null, null,
-    '/api/swagger.json', 'qBounty API Docs'
+    '/api/swagger.json', 'Hiring Blocks API Docs'
   )
 )
 
 api.server.use('/graphiql', graphiql({endpoint: '/api/'}))
+
+require('./models')
 
 api.start()

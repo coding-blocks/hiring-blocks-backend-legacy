@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "description": "CB Placements web portal for jobs and internships(Backend) ",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -p .",
+    "lint.fix": "tslint --fix -p .",
+    "prestart": "npm run build",
+    "start": "node dist/server.js"
+  },
   "author": "Bhavya Aggarwal <bhavyaaggarwal1209@gmail.com>",
   "license": "ISC",
   "dependencies": {

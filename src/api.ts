@@ -9,7 +9,7 @@ import config = require('../config')
 const debug = dbg('hb');
 
 jsonAPI.setConfig({
-  graphiql: false,
+  graphiql: true,
   jsonapi: true,
   protocol: 'http',
   hostname: config.SERVER.HOST,

@@ -1,11 +1,20 @@
 {
   "name": "hiring-blocks-backend",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "CB Placements web portal for jobs and internships(Backend) ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "author": "Bhavya Aggarwal <bhavyaaggarwal1209@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "express-graphiql-toolbox": "^0.1.0",
+    "jagapi": "^5.5.1",
+    "jagapi-sequelize": "^5.4.1",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "swagger-ui-express": "^2.0.15"
+  }
 }

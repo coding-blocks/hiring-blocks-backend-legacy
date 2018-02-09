@@ -2,6 +2,13 @@
  * Created by bhavyaagg on 09/02/18.
  */
 
+const DB_DIALECT = 'postgres'
+const DB_USER = 'hbuser'
+const DB_PASSWORD = 'hbpass'
+const DB_HOST = 'localhost'
+const DB_PORT = 5432
+const DB_NAME = 'hb'
+
 const config = {
   INFO: {
     TITLE: 'Hiring Blocks API',
@@ -17,13 +24,8 @@ const config = {
     HOST: 'localhost'
   },
   DB: {
-    DIALECT: 'postgres',
-    USER: 'hbuser',
-    PASSWORD: 'hbpass',
-    HOST: 'localhost',
-    PORT: 5432,
-    NAME: 'hb',
-    URI: `${config.DB.DIALECT}://${config.DB.USER}:${config.DB.PASSWORD}@${config.DB.HOST}:${config.DB.PORT}/${config.DB.NAME}`
+    DB_DIALECT, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME,
+    DB_URI: `${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`
   }
 };
 

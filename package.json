@@ -16,7 +16,7 @@
   "dependencies": {
     "debug": "^3.1.0",
     "express-graphiql-toolbox": "^0.1.0",
-    "jagapi": "^5.5.1",
+    "jagapi": "^5.5.6",
     "jagapi-sequelize": "^5.4.1",
     "pg": "^6.4.2",
     "pg-hstore": "^2.3.2",

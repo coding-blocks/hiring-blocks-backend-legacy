@@ -23,8 +23,8 @@ jsonApi.define<User>({
         name: Joi.string().required(),
         contact: Joi.string().required(),
         email: Joi.string().email().required(),
-        pincode: Joi.number(),
-        image: Joi.string()
+        pincode: Joi.number().allow(null),
+        image: Joi.string().allow(null)
     },
     examples: [
         {

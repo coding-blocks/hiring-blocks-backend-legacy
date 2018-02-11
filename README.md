@@ -13,10 +13,10 @@ In psql shell:
 
 Scripts:
 ```
-npm i // Install Dependencies
-npm i -D // Install Dev Dependencies
-npm run start // Start the server
-npm run start.dev // Start the server with DEBUG=*
+npm install     // Install Dependencies
+npm install -D      // Install Dev Dependencies
+npm run start       // Start the server
+npm run start.dev       // Start the server with DEBUG=*
 ```
 
 

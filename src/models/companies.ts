@@ -4,6 +4,7 @@
 
 import jsonAPI = require('jagapi')
 import {createHandler} from "../handlers/sequelize"
+import {Job} from "./jobs";
 
 const Joi = jsonAPI.Joi
 const sqlHandler = createHandler();
@@ -13,13 +14,14 @@ export interface Company {
   name: string,
   logo?: string, // TODO: Confirm
   website?: string,
-  locations?: string[],
+  locations: string[], // Can be online
   skills?: string[],
   email: string,
   phnNo?: string, // TODO: Confirm for +91 cases
-  contactName?: string,
+  contactName: string,
   contactEmail?: string,
-  contactPhnNo?: string // TODO: Same as above
+  contactPhnNo?: string // TODO: Same as above,
+  jobs?: Job        // TODO: Maybe Error in Jagapi. Solve Later
 }
 
 jsonAPI.define<Company>({
@@ -30,12 +32,19 @@ jsonAPI.define<Company>({
   attributes: {
     id: Joi.string(),
     name: Joi.string().required(),
-    email: Joi.string().email().required()
+    locations: Joi.array().items(Joi.string()).required(),
+    contactName: Joi.string().required(),
+    email: Joi.string().email().required(),
   },
   examples: [
     {
       type: 'companies',
       name: 'Coding Blocks',
+      locations: [
+        'Pitampura',
+        'Dwarka'
+      ],
+      contactName: 'Priyanshu Aggarwal',
       email: 'dev@codingblocks.com'
     }
   ]
